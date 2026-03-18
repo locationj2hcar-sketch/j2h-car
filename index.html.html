@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J2H CAR Rental</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Hero Section -->
+  <section class="bg-black text-white py-20 px-6 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">J2H CAR Rental</h1>
+    <p class="text-lg text-gray-300">Drive your journey with comfort, style, and reliability.</p>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="py-12 px-6 bg-gray-100">
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+      <h2 class="text-2xl font-bold mb-6 text-center">Book Your Car</h2>
+      <p class="text-center text-gray-600 mb-4 text-sm">
+        Customers must come to our agency to pick up the vehicle and return it to the same location.
+      </p>
+      <div class="bg-black text-white rounded-xl p-4 text-center text-sm font-medium mb-6">
+        No delivery service available. Pickup and return are done at our agency only.
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <input id="pickup" type="date" class="w-full border rounded-xl p-3" />
+        <input id="return" type="date" class="w-full border rounded-xl p-3" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet Section -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-4">Our Fleet</h2>
+      <p class="text-center text-gray-600 mb-12 text-sm">
+        Prices vary depending on season and rental duration. Contact us for an exact quote.
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-6">Manual Cars</h3>
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-bold">Peugeot 208</h4>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-bold">Opel Corsa</h4>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-bold">Dacia Logan</h4>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-bold">Dacia Sandero</h4>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-bold">Renault Clio</h4>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-6">Automatic Cars</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-bold">Hyundai Tucson</h4>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-bold">Peugeot 2008</h4>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-bold">Dacia Duster</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+    <p class="text-xl font-semibold">📞 0656979672</p>
+    <p class="mt-4">Sale, Morocco</p>
+  </section>
+
+  <!-- WhatsApp Script -->
+  <script>
+    function sendWhatsApp(car) {
+      const pickup = document.getElementById('pickup').value || 'Not selected';
+      const returnDate = document.getElementById('return').value || 'Not selected';
+      const message = `Hello, I would like to request a quote for ${car}. Pickup: ${pickup}, Return: ${returnDate}`;
+      window.open(`https://wa.me/212656979672?text=${encodeURIComponent(message)}`, '_blank');
+    }
+  </script>
+
+</body>
+</html>
